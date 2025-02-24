@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "Python: FastAPI (Uvicorn)",
+        "name": "FastAPI: Debug",
         "type": "debugpy",
         "request": "launch",
         "module": "uvicorn",
@@ -12,8 +12,26 @@
         ],
         "jinja": true,
         "justMyCode": true,
-        "post": "Open Browser"
+        "console": "integratedTerminal",
+      },
+      {
+        "name": "Next.js: Debug",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": ["run", "dev"],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "preLaunchTask": "Open Browser",
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Full Stack: FastAPI & Next.js",
+        "configurations": [
+          "FastAPI: Debug",
+          "Next.js: Debug"
+        ],
       }
     ]
-  }
-  
+}
