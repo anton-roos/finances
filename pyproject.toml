@@ -1,0 +1,13 @@
+[project]
+name = "finances"
+version = "0.1.0"
+description = "Finance management app"
+authors = [
+  { name = Anton Roos", email = "anton@email.com" },
+  { name = Hannes Roos", email = "hannes@email.com" }
+]
+dependencies = [
+  "fastapi>=0.95.2",
+  "uvicorn>=0.22.0",
+  "sqlalchemy>=1.4.46"
+]
